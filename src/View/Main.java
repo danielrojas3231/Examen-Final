@@ -29,6 +29,7 @@ public class Main extends PApplet {
 	
 	public void mousePressed() {
 		logica.crear();
+		logica.agregar();
 	}
 
 

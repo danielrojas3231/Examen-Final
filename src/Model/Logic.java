@@ -20,6 +20,7 @@ public class Logic {
 	
 	public Logic(PApplet app){
 		this.app=app;
+		this.array = new Personaje[4];
 	}
 	
 	public void cargarImagenes(){
@@ -47,7 +48,20 @@ public class Logic {
 	}
 	
 	public void agregar(){
-		
+		for(int i=0; i<personajes.size();i++){
+			if(personajes.get(i).isOver()){
+				personajes.get(i).setX(100-34);
+				personajes.get(i).setY(110);
+				if(personajes.get(i).getImg() == homero){
+					personajes.get(i).setImg(bart);	
+				}else{
+					personajes.get(i).setImg(homero);	
+				}
+				array[0] = personajes.get(i);
+				personajes.remove(i);
+				System.out.println(array.length);	
+			}
+		}		
 	}
 	
 	public void iniciarHilo(){
@@ -64,6 +78,17 @@ public class Logic {
 			personajes.get(i).pintar();
 			
 		}
+		try {
+			for(int i=0; i<array.length;i++){
+				array[i].pintar();
+				
+			}
+			
+		}catch(NullPointerException e) {
+			e.getMessage();
+		}
+			
+		
 	}
 	
 	
