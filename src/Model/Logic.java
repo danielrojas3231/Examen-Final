@@ -31,13 +31,30 @@ public class Logic {
 	}
 	
 	public void crear() {
-		int x= (int) app.random(200,1000);
-		int y= (int) app.random(200,800);
-		personajes.add(new Personaje(x,y,bart,app));
-		System.out.println("entra");
+		if(app.mouseX>500 && app.mouseX<650 &&
+			app.mouseY>700 && app.mouseY<750){
+			int x= (int) app.random(200,1000-72);
+			int y= (int) app.random(50,600-110);
+			int img= (int) app.random(2);
+			if(img==0){
+				personajes.add(new Personaje(x,y,bart,app));
+			}else {
+				personajes.add(new Personaje(x,y,homero,app));
+			}
+			
+		}
+	}
+	
+	public void iniciarHilo(){
+		for(int i=0; i<personajes.size();i++){
+			new Thread(personajes.get(i)).start();
+		}
+		
 	}
 	
 	public void pintar() {
+		app.fill(0,0,255);
+		app.rect(500, 700, 150, 50,50);
 		for(int i=0; i<personajes.size();i++){
 			personajes.get(i).pintar();
 			

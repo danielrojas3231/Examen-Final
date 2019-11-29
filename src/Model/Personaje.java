@@ -35,7 +35,7 @@ public class Personaje implements Runnable{
 	
 	public void mover(){
 		x+=vel;
-		if(x>100 || x<200){
+		if(x>1000-72 || x<200){
 			vel*=-1;
 		}
 		

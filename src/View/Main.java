@@ -24,6 +24,7 @@ public class Main extends PApplet {
 	public void draw() {
 		background(255);
 		logica.pintar();
+		logica.iniciarHilo();
 	}
 	
 	public void mousePressed() {
