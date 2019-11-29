@@ -16,6 +16,7 @@ public class Personaje implements Runnable{
 	public Personaje(int x, int y, PImage img, PApplet app){
 		this.x=x;
 		this.y=y;
+		this.vel=4;
 		this.img=img;
 		this.app=app;
 		this.edad= (int) app.random(30);
@@ -28,11 +29,15 @@ public class Personaje implements Runnable{
 
 	
 	public void run() {
-		// TODO Auto-generated method stub
+		mover();
 		
 	}
 	
 	public void mover(){
+		x+=vel;
+		if(x>100 || x<200){
+			vel*=-1;
+		}
 		
 	}
 	

@@ -31,7 +31,9 @@ public class Logic {
 	}
 	
 	public void crear() {
-		personajes.add(new Personaje(57,57,bart,app));
+		int x= (int) app.random(200,1000);
+		int y= (int) app.random(200,800);
+		personajes.add(new Personaje(x,y,bart,app));
 		System.out.println("entra");
 	}
 	
