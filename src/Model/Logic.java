@@ -15,6 +15,7 @@ public class Logic {
 	
 	
 	private ArrayList<Personaje> personajes = new ArrayList<Personaje>();
+	private Personaje[] array;  
 	private PApplet app;
 	
 	public Logic(PApplet app){
@@ -43,6 +44,10 @@ public class Logic {
 			}
 			
 		}
+	}
+	
+	public void agregar(){
+		
 	}
 	
 	public void iniciarHilo(){

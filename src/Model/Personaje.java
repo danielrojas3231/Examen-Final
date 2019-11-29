@@ -10,6 +10,7 @@ public class Personaje implements Runnable{
 	private int x;
 	private int y;
 	private int vel;
+	private boolean over;
 	private int edad;
 	private int suerte;
 	
@@ -21,10 +22,12 @@ public class Personaje implements Runnable{
 		this.app=app;
 		this.edad= (int) app.random(30);
 		this.suerte= (int) app.random(30);
+		this.over=false;
 	}
 	
 	public void pintar() {
 		app.image(img, x, y,72,110);
+		
 	}
 
 	
