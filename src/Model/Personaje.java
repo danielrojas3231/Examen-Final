@@ -3,7 +3,7 @@ package Model;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class Personaje {
+public class Personaje implements Runnable{
 	
 	private PApplet app;
 	private PImage img;
@@ -19,6 +19,16 @@ public class Personaje {
 		this.app=app;
 		this.edad= (int) app.random(30);
 		this.edad= (int) app.random(30);
+	}
+	
+	public void pintar() {
+		app.image(img, x, y);
+	}
+
+	
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 

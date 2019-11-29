@@ -23,6 +23,11 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(255);
+		//logica.pintar();
+	}
+	
+	public void mousePressed() {
+		logica.crear();
 	}
 
 
