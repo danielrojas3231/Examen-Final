@@ -13,6 +13,7 @@ public class Logic {
 	private PImage maggie;
 	private PImage marge;
 	
+	
 	private ArrayList<Personaje> personajes = new ArrayList<Personaje>();
 	private PApplet app;
 	
@@ -31,14 +32,16 @@ public class Logic {
 	
 	public void crear() {
 		personajes.add(new Personaje(57,57,bart,app));
-		System.out.println(personajes.size());
+		System.out.println("entra");
 	}
 	
 	public void pintar() {
-		for(int i=0; i!=0 && i<personajes.size();i++){
+		for(int i=0; i<personajes.size();i++){
 			personajes.get(i).pintar();
+			
 		}
 	}
+	
 	
 
 }

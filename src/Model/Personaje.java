@@ -9,6 +9,7 @@ public class Personaje implements Runnable{
 	private PImage img;
 	private int x;
 	private int y;
+	private int vel;
 	private int edad;
 	private int suerte;
 	
@@ -18,11 +19,11 @@ public class Personaje implements Runnable{
 		this.img=img;
 		this.app=app;
 		this.edad= (int) app.random(30);
-		this.edad= (int) app.random(30);
+		this.suerte= (int) app.random(30);
 	}
 	
 	public void pintar() {
-		app.image(img, x, y);
+		app.image(img, x, y,72,110);
 	}
 
 	
@@ -30,6 +31,11 @@ public class Personaje implements Runnable{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void mover(){
+		
+	}
+	
 
 
 }

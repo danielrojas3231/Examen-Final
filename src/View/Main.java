@@ -13,7 +13,7 @@ public class Main extends PApplet {
 	Logic logica;
 	
 	public void settings() {
-		size(600,600);
+		size(1000,800);
 	}
 	
 	public void setup() {
@@ -23,7 +23,7 @@ public class Main extends PApplet {
 	
 	public void draw() {
 		background(255);
-		//logica.pintar();
+		logica.pintar();
 	}
 	
 	public void mousePressed() {
